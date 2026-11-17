@@ -50,7 +50,7 @@ def get_start():
 
 def weekend_fee(date:datetime):
     day = datetime.strptime(date,"%Y-%m-%d")
-    if day in (5,6):
+    if day.weekday() in (5,6):
         return True
     return False
     
@@ -263,15 +263,4 @@ def change_booking_cancel(book_id,price):
 
 
 if __name__ =="__main__":
-    change_start({
-        "booking_id": "B005",
-        "customer_name": "Daniel Peretz",
-        "room_id": "R002",
-        "booking_date": "2026-11-16",
-        "start_time": "16:00",
-        "players": 3,
-        "total_price": 360.0,
-        "status": "Cancelled",
-        "cancellation_fee": 90.0
-    },
-)
+    print(weekend_fee("2026-7-17"))
