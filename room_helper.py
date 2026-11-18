@@ -27,7 +27,7 @@ def get_new_id(object):
     if last_id[-1] != "9":
         new = last_id[:-1] +str(int(last_id[-1]) +1)
     else:
-        new = last_id[: -2] + str(int(last_id[-2] + 1))+"0"
+        new = last_id[: -2] + str(int(last_id[-2]) + 1)+"0"
     return new
 
 
